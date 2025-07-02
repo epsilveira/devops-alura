@@ -1,0 +1,10 @@
+services:
+  api:
+    build: .
+    container_name: api_alura    
+    volumes:
+      # Mapeia o diretório atual para /app no contêiner
+      # Isso permite o live-reload e a persistência do banco de dados SQLite no seu host
+      - .:/app
+    ports:
+      - "8000:8000"
